@@ -1,8 +1,10 @@
 package com.example.chronochef
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -45,23 +47,41 @@ class MainActivity : AppCompatActivity() {
         userInputTime.setOnClickListener {
             val userTime = userInputTime.text.toString()
             val userTimeMinutes = timeToMinutes(userTime)
+            val tofoodActivity = Intent(this, foodActivity::class.java)
 
+            // Checks is input valid
             if (isValidTime(userTime)) {
+                // TODO: Change the testInput to go to own screen for food options
+                // TODO: Make input clear after switching screen
                 when (userTimeMinutes) {
-                    in morningStartTimeMinuets..morningEndTimeMinuets -> testInput.text = "Morning"
-                    in afternoonStartTimeMinutes..afternoonEndTimeMinutes -> testInput.text = "Afternoon"
-                    in eveningStartTimeMinutes..eveningEndTimeMinutes -> testInput.text = "Evening"
-                    else -> testInput.text = "Night"
-
+                    in morningStartTimeMinuets..morningEndTimeMinuets -> {
+                        testInput.text = "Morning"
+                        intent.putExtra("Morning",userInputTime.text.toString())
+                    }
+                    in afternoonStartTimeMinutes..afternoonEndTimeMinutes -> {
+                        testInput.text = "Afternoon"
+                        intent.putExtra("Afternoon",userInputTime.text.toString())
+                    }
+                    in eveningStartTimeMinutes..eveningEndTimeMinutes -> {
+                        testInput.text = "Evening"
+                        intent.putExtra("Evening",userInputTime.text.toString())
+                    }
+                    else -> {
+                        testInput.text = "Night"
+                        intent.putExtra("Night",userInputTime.text.toString())
+                    }
                 }
+                // Moves to foodActivity
+                startActivity(tofoodActivity)
+
             }
+            // Notify user of format
             else {
-                testInput.text = "Enter Valid Time"
+                Toast.makeText(this, "Please enter a valid time: HH/mm", Toast.LENGTH_SHORT).show()
             }
         }
     }
 }
-
 
 // Function to check if user input actually has a time value
 private fun isValidTime(Time: String): Boolean {
@@ -85,10 +105,16 @@ private fun timeToMinutes(Time: String): Int {
     }
     // Remove the :, and place the parts into an array
     val splitParts = Time.split(":")
+    // Prevents crash due to no ":"
+    if (splitParts.size != 2) {
+        return 0
+    }
+    else {
     // Holds the hours in 0th element
     val splitHours = splitParts[0].toInt()
     // Holds the Minuets in 1st element
     val splitMinutes = splitParts[1].toInt()
     // Return the time in Int format
     return splitHours * 60 + splitMinutes
+    }
 }
