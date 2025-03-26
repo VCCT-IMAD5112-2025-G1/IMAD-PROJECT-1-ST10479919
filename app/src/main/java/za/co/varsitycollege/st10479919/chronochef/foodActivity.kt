@@ -1,6 +1,8 @@
-package com.example.chronochef
+package za.co.varsitycollege.st10479919.chronochef
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,27 +26,48 @@ class foodActivity : AppCompatActivity() {
 
         val menuList = findViewById<TextView>(R.id.testKey)
         val cardHeader = findViewById<TextView>(R.id.cardHeader)
+        val returnButton = findViewById<Button>(R.id.returnButton)
 
         // Change what happens based on what user input
         // TODO: Add food for user
         when (userInput) {
             "Morning" -> {
                 cardHeader.text = "Breakfast"
-                menuList.text = "Eggs and bacon"
+                menuList.text = "Eggs and bacon" +
+                        "Mussi with yogart" +
+                        "Fruit salad" +
+                        "Chicken & Broccoli"
             }
             "Afternoon" -> {
                 cardHeader.text = "Lunch"
-                menuList.text = "Tea and Biscuits"
+                menuList.text = "Tea and Biscuits" +
+                        "Ramen" +
+                        "Chicken Grilled Cheese" +
+                        "Chicken Fried Rice"
             }
             "Evening" -> {
                 cardHeader.text = "Dinner"
-                menuList.text = "Evening"
+                menuList.text = "Garlic steak" +
+                        "Wraps" +
+                        "Butter chicken" +
+                        "Chicken Caesar Pasta Salad"
             }
             else -> {
                 cardHeader.text = "Night snack"
-                menuList.text = "Night"
+                menuList.text = "Protein smoothie" +
+                        "Hot cereal" +
+                        "Crackers and cheese" +
+                        "Yogurt"
             }
         }
+
+        // Button to return to MainActivity
+
+        returnButton.setOnClickListener {
+            val toMainActivity = Intent(this,MainActivity::class.java)
+            startActivity(toMainActivity)
+        }
+
 
     }
 }

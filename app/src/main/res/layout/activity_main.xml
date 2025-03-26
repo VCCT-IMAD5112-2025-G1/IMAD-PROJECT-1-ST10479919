@@ -5,8 +5,9 @@
     android:id="@+id/testingView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/joseph_gonzalez_fdlzbwip0am_unsplash_min"
     tools:context=".MainActivity">
-    <!--TODO: Choose good background -->
+    <!--Gonzalez, J. (2016). Sandwich with boiled egg [Review of Sandwich with boiled egg]. https://unsplash.com/photos/sandwich-with-boiled-egg-fdlZBWIP0aM‌ -->
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
         android:layout_height="603dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:background="#D8D8E1FF"
+        android:background="#D8353638"
         android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +39,7 @@
             android:fontFamily="sans-serif-medium"
             android:text="Welcome to Chrono Chef"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -55,9 +57,11 @@
             android:layout_marginBottom="167dp"
             android:ems="10"
             android:hint="Please enter the time"
+            android:textColorHint="#FFFFFF"
             android:inputType="time"
             android:textAlignment="center"
             android:textAllCaps="false"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="h,1:1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,6 +74,7 @@
             android:layout_width="301dp"
             android:layout_height="36dp"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/userInputTime"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

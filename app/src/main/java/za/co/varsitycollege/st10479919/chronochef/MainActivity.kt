@@ -1,4 +1,4 @@
-package com.example.chronochef
+package za.co.varsitycollege.st10479919.chronochef
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.text.SimpleDateFormat
 import java.util.Locale
+import za.co.varsitycollege.st10479919.chronochef.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

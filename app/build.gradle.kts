@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.chronochef"
+    namespace = "za.co.varsitycollege.st10479919.chronochef"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.chronochef"
+        applicationId = "za.co.varsitycollege.st10479919.chronochef"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

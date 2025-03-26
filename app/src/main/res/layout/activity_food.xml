@@ -5,9 +5,10 @@
     android:id="@+id/testingView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/joseph_gonzalez_fdlzbwip0am_unsplash_min"
     android:clickable="false"
     tools:context=".foodActivity">
-    <!--TODO: Choose good background -->
+    <!--Gonzalez, J. (2016). Sandwich with boiled egg [Review of Sandwich with boiled egg]. https://unsplash.com/photos/sandwich-with-boiled-egg-fdlZBWIP0aM‌-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -24,7 +25,7 @@
         android:layout_height="575dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:background="#D8D8E1FF"
+        android:background="#D8353638"
         android:fadeScrollbars="false"
         android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,8 +39,9 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textColor="#FFFFFF"
 
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/testKey"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,11 +53,25 @@
             android:id="@+id/testKey"
             android:layout_width="190dp"
             android:layout_height="288dp"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.396" />
+
+        <Button
+            android:id="@+id/returnButton"
+            android:layout_width="179dp"
+            android:layout_height="41dp"
+            android:backgroundTint="#FCF5FD"
+            android:text="Go back"
+            android:textColor="#000000"
+            app:iconPadding="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/testKey" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
