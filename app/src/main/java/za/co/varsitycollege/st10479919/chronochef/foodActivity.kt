@@ -29,35 +29,34 @@ class foodActivity : AppCompatActivity() {
         val returnButton = findViewById<Button>(R.id.returnButton)
 
         // Change what happens based on what user input
-        // TODO: Add food for user
         when (userInput) {
             "Morning" -> {
-                cardHeader.text = "Breakfast"
-                menuList.text = "Eggs and bacon" +
-                        "Mussi with yogart" +
-                        "Fruit salad" +
-                        "Chicken & Broccoli"
+                cardHeader.text = "Breakfast\n"
+                menuList.text = "Eggs and bacon\n" +
+                        "Mussi with yogart\n" +
+                        "Fruit salad\n" +
+                        "Chicken & Broccoli\n"
             }
             "Afternoon" -> {
                 cardHeader.text = "Lunch"
-                menuList.text = "Tea and Biscuits" +
-                        "Ramen" +
-                        "Chicken Grilled Cheese" +
-                        "Chicken Fried Rice"
+                menuList.text = "Tea and Biscuits\n" +
+                        "Ramen\n" +
+                        "Chicken Grilled Cheese\n" +
+                        "Chicken Fried Rice\n"
             }
             "Evening" -> {
                 cardHeader.text = "Dinner"
-                menuList.text = "Garlic steak" +
-                        "Wraps" +
-                        "Butter chicken" +
-                        "Chicken Caesar Pasta Salad"
+                menuList.text = "Garlic steak\n" +
+                        "Wraps\n" +
+                        "Butter chicken\n" +
+                        "Chicken Caesar Pasta Salad\n"
             }
             else -> {
                 cardHeader.text = "Night snack"
-                menuList.text = "Protein smoothie" +
-                        "Hot cereal" +
-                        "Crackers and cheese" +
-                        "Yogurt"
+                menuList.text = "Protein smoothie\n" +
+                        "Hot cereal\n" +
+                        "Crackers and cheese\n" +
+                        "Yogurt\n"
             }
         }
 
