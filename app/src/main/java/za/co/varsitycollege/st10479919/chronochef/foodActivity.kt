@@ -1,5 +1,6 @@
 package za.co.varsitycollege.st10479919.chronochef
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import org.w3c.dom.Text
 
 class foodActivity : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -33,16 +35,22 @@ class foodActivity : AppCompatActivity() {
             "Morning" -> {
                 cardHeader.text = "Breakfast\n"
                 menuList.text = "Eggs and bacon\n" +
-                        "Mussi with yogart\n" +
+                        "Muesli with yogurt\n" +
                         "Fruit salad\n" +
                         "Chicken & Broccoli\n"
             }
             "Afternoon" -> {
                 cardHeader.text = "Lunch"
-                menuList.text = "Tea and Biscuits\n" +
-                        "Ramen\n" +
+                menuList.text = "Ramen\n" +
                         "Chicken Grilled Cheese\n" +
                         "Chicken Fried Rice\n"
+            }
+            "Afternoon-Snack" -> {
+                cardHeader.text = "Afternoon Snack"
+                menuList.text = "Tea and Biscuits\n" +
+                        "Chips\n" +
+                        "Bagels\n" +
+                        "Apples\n"
             }
             "Evening" -> {
                 cardHeader.text = "Dinner"
@@ -50,6 +58,12 @@ class foodActivity : AppCompatActivity() {
                         "Wraps\n" +
                         "Butter chicken\n" +
                         "Chicken Caesar Pasta Salad\n"
+            }
+            "Mid-NightSnack" -> {
+                cardHeader.text = "Night Snack"
+                menuList.text = "yogurt with berries\n" +
+                        "cheese and crackers\n" +
+                        "Nuts\n"
             }
             else -> {
                 cardHeader.text = "Night snack"

@@ -1,5 +1,6 @@
 package za.co.varsitycollege.st10479919.chronochef
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -15,6 +16,7 @@ import java.util.Locale
 import za.co.varsitycollege.st10479919.chronochef.R
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -40,14 +42,20 @@ class MainActivity : AppCompatActivity() {
                     in timeToMinutes("6:00")..timeToMinutes("11:59") -> {
                         userReference.text = "Morning"
                     }
-                    in timeToMinutes("12:00")..timeToMinutes("15:00") -> {
+                    in timeToMinutes("12:00")..timeToMinutes("13:00") -> {
                         userReference.text = "Afternoon"
+                    }
+                    in timeToMinutes("13:01")..timeToMinutes("15:00") -> {
+                        userReference.text = "Afternoon-Snack"
                     }
                     in timeToMinutes("15:01")..timeToMinutes("15:59") ->{
                         userReference.text = "Mid-Afternoon"
                     }
                     in timeToMinutes("16:00")..timeToMinutes("20:00") -> {
                         userReference.text = "Evening"
+                    }
+                    in timeToMinutes("20:01")..timeToMinutes("22:00") -> {
+                        userReference.text = "Mid-NightSnack"
                     }
                     else -> {
                         userReference.text = "Night"
@@ -60,6 +68,7 @@ class MainActivity : AppCompatActivity() {
                 // Moves to FoodActivity
                 startActivity(toFoodActivity)
 
+                // Clear text to make screen empty
                 userInputTime.text.clear()
                 userReference.visibility = View.GONE
             }
