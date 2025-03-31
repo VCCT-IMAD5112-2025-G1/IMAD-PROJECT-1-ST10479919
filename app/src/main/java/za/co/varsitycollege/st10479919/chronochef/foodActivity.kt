@@ -22,6 +22,7 @@ class foodActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         // Get user input from other Activity
         val bundle: Bundle? = intent.extras
         val userInput: String? = bundle?.getString("userInput")

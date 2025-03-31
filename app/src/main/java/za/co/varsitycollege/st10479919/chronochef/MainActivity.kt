@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        // Declarations
         val userInputTime = findViewById<EditText>(R.id.userInputTime)
         val userReference = findViewById<TextView>(R.id.userReference)
 
@@ -94,6 +94,7 @@ private fun isValidTime(Time: String): Boolean {
         false
     }
 }
+
 // Converts user input to minuets for ranges and conditionals
 private fun timeToMinutes(Time: String): Int {
     // Lets the function wait for user input, else the app crashes from splitting a null
