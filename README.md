@@ -29,3 +29,9 @@ Please make sure you are using the latest avalible version of android
 ## Requirements
 
 Android Oreo (8.0) or higher
+
+## Github repository
+
+https://github.com/VCCT-IMAD5112-2025-G1/IMAD-PROJECT-1-ST10479919
+
+
