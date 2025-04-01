@@ -34,4 +34,7 @@ Android Oreo (8.0) or higher
 
 https://github.com/VCCT-IMAD5112-2025-G1/IMAD-PROJECT-1-ST10479919
 
+## Youtube link
+
+https://www.youtube.com/shorts/u0kUceKKK3E
 
