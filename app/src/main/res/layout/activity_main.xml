@@ -32,6 +32,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="179dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="64dp"
+            android:backgroundTint="#FCF5FD"
+            android:text="Reset text"
+            android:textColor="#000000"
+            app:iconPadding="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/testKey" />
+
         <TextView
             android:id="@+id/welcomeText"
             android:layout_width="199dp"

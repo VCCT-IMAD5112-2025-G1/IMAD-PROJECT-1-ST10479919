@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -29,11 +30,12 @@ class MainActivity : AppCompatActivity() {
         // Declarations
         val userInputTime = findViewById<EditText>(R.id.userInputTime)
         val userReference = findViewById<TextView>(R.id.userReference)
+        val resetButton = findViewById<Button>(R.id.resetButton)
 
         userInputTime.setOnClickListener {
+
             val userTime = userInputTime.text.toString()
             val userTimeMinutes = timeToMinutes(userTime)
-
 
             // Checks is input valid
             if (isValidTime(userTime)) {
@@ -76,6 +78,12 @@ class MainActivity : AppCompatActivity() {
             else {
                 Toast.makeText(this, "Please enter a valid time: HH/mm" + " 24 hour format", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        // Button to reset the text that user inputs
+        resetButton.setOnClickListener {
+            userInputTime.text.clear()
+
         }
     }
 }

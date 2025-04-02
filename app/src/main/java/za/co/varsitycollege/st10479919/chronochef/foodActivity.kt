@@ -76,7 +76,6 @@ class foodActivity : AppCompatActivity() {
         }
 
         // Button to return to MainActivity
-
         returnButton.setOnClickListener {
             val toMainActivity = Intent(this,MainActivity::class.java)
             startActivity(toMainActivity)
