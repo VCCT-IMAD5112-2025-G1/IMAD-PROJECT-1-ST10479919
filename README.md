@@ -24,17 +24,23 @@ Please make sure you are using the latest avalible version of android
 
 ![image](https://github.com/user-attachments/assets/134e8b7e-19a5-4f3e-8644-06da00a81af5)
 
+## How to install
 
+```
+git clone https://github.com/VCCT-IMAD5112-2025-G1/IMAD-PROJECT-1-ST10479919
+```
+Import to Android Studio<br/>
+
+Build and run the app<br/>
 
 ## Requirements
 
 Android Oreo (8.0) or higher
 
-## Github repository
-
-https://github.com/VCCT-IMAD5112-2025-G1/IMAD-PROJECT-1-ST10479919
-
 ## Youtube link
 
 https://www.youtube.com/shorts/u0kUceKKK3E
 
+## GitHub repository
+
+https://github.com/VCCT-IMAD5112-2025-G1/IMAD-PROJECT-1-ST10479919
