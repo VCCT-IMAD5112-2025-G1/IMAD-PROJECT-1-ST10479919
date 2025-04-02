@@ -41,6 +41,11 @@ Android Oreo (8.0) or higher
 
 https://www.youtube.com/shorts/u0kUceKKK3E
 
+## Report
+
+[IMAD Project 1 README.pdf](https://github.com/user-attachments/files/19566724/IMAD.Project.1.README.pdf)
+
+
 ## GitHub repository
 
 https://github.com/VCCT-IMAD5112-2025-G1/IMAD-PROJECT-1-ST10479919
